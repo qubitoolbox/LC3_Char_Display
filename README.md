@@ -1,1 +1,1 @@
-# LC3_Char_Display
+LC3 Machine Language. Program outputs integers larger than ten.
