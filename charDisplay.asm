@@ -35,7 +35,6 @@ NextCheck	LD	R2,ASCII_9 	; loads ascii rep of number zero
 		BRp	ReadInt
 		BRz	Continue
 
-		;ADD	R1,R1,R0	; store value received by user
 Continue	AND	R1,R1,#0
 		ADD	R1,R1,R0
 		TRAP	x21		;output char number to user
@@ -91,7 +90,6 @@ Calculate	ADD	R5,R5,R6 	;Product incrementor
 		BRp	Calculate
 
 Displayint	AND	R0,R0,#0
-		;TRAP	x21
 		ADD	R0,R0,R5	; R0, holds result of multiplication
 
 		AND 	R1,R1,#0 	;clear register
@@ -129,9 +127,6 @@ End100		ADD 	R5,R0,#10
 		BRnzp 	Loophundred
 
 Endten		ADD 	R6,R6,#1
-		;LEA 	R0,MSG1
-		;Trap	x22
-		;AND R0,R0,#0
 		ADD 	R0,R6,#0
 		Trap 	x22		;puts	
 		Trap 	x26		;invoke trap x26
