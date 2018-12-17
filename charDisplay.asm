@@ -1,5 +1,3 @@
-; Osman D Morales
-
 		.ORIG xFD70 		;starting address
 
 		AND 	R0,R0,#0 	;Clear register
