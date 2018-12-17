@@ -4,12 +4,12 @@ AND 	R1,R1,#0 	;clear register
 AND 	R2,R2,#0 	;clear register
 AND 	R3,R3,#0 	;clear register
 AND 	R4,R4,#0 	;clear register
-		AND 	R5,R5,#0 	;clear register
-		AND 	R6,R6,#0 	;clear register
-		AND 	R7,R7,#0 	;clear register
-	
-		LEA	R7,ReadInt 	; Initialize the address of subroutine
+AND 	R5,R5,#0 	;clear register
+AND 	R6,R6,#0 	;clear register
+AND 	R7,R7,#0 	;clear register
 
+LEA	R7,ReadInt 	; Initialize the address of subroutine
+; a sub routine is a function, that works in low level mode
 
 ReadInt		LEA	R0,MSG		;load address of display message
 		TRAP	x22		;display message
@@ -18,6 +18,7 @@ ReadInt1	LD	R0,ASCII_	; Loads the the ascii table values
 		LD	R2,ASCII_0 	; loads ascii rep of number zero
 		TRAP 	x20		; receive user input
 		NOT	R2,R2		; negate 48 to be able to subtract
+		;value needs to be increment once
 		ADD	R2,R2,#1	; convert to -48
 		ADD	R1,R0,R2	; Subtract R0 - 48
 		BRzp	NextCheck	; if zero or positive, continue
