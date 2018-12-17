@@ -30,8 +30,8 @@ NextCheck	LD	R2,ASCII_9 	; loads ascii rep of number zero
 		NOT	R2,R2		; for integers only
 		ADD	R2,R2,#1	; integers only
 		ADD	R1,R0,R2
-		BRp	ReadInt
-		BRz	Continue
+		BRp	ReadInt		;if the value is positive go back to ReadInt to display msg
+		BRz	Continue        ;else keep on
 
 Continue	AND	R1,R1,#0
 		ADD	R1,R1,R0
