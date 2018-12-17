@@ -1,10 +1,9 @@
-		.ORIG xFD70 		;starting address
-
-		AND 	R0,R0,#0 	;Clear register
-		AND 	R1,R1,#0 	;clear register
-		AND 	R2,R2,#0 	;clear register
-		AND 	R3,R3,#0 	;clear register
-		AND 	R4,R4,#0 	;clear register
+.ORIG xFD70 		;starting address
+AND 	R0,R0,#0 	;Clear register
+AND 	R1,R1,#0 	;clear register
+AND 	R2,R2,#0 	;clear register
+AND 	R3,R3,#0 	;clear register
+AND 	R4,R4,#0 	;clear register
 		AND 	R5,R5,#0 	;clear register
 		AND 	R6,R6,#0 	;clear register
 		AND 	R7,R7,#0 	;clear register
